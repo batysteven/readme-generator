@@ -11,7 +11,7 @@ const generateCreditText = creditText => {
 }
 
 module.exports = templateData => {
-    const { projectTitle, descriptionText, installationText, usageText, creditText, licenseText, contributingText, test, name, github, email } = templateData;
+    const { projectTitle, descriptionText, installationText, usageText, creditsText, licenseText, contributingText, test, name, github, email } = templateData;
     
     return `
     # ${projectTitle}
@@ -34,7 +34,7 @@ module.exports = templateData => {
     ## Usage
     ${usageText}
 
-    ${generateCreditText(creditText)}
+    ${generateCreditText(creditsText)}
 
     ## License
     ${licenseText}

@@ -60,8 +60,8 @@ const promptUser = () => {
             type: 'input',
             name: 'descriptionText',
             message: 'Enter a thorough and detailed description about your project (Required)',
-            validate: descritpionTextInput => {
-                if (descritpionTextInput) {
+            validate: descriptionTextInput => {
+                if (descriptionTextInput) {
                     return true;
                 } else {
                     console.log('Please enter a thorough and detailed description about your project!');
@@ -105,12 +105,12 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'creditText',
+            name: 'creditsText',
             message: 'Provide information for the collaborators and their GitHub profiles:',
             when: ({ confirmCreditText }) => confirmCreditText
         }
-    ])
-}
+    ]);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
