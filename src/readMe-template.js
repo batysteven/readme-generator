@@ -1,6 +1,6 @@
 //export function to generate entire page
 module.exports = templateData => {
-    const { projectTitle, descriptionText, installationText, usageText, creditText, licenseText, contributingText, test, questionText } = templateData;
+    const { projectTitle, descriptionText, installationText, usageText, creditText, licenseText, contributingText, test, name, github, email } = templateData;
     
     return `
     # ${projectTitle}
@@ -38,6 +38,9 @@ module.exports = templateData => {
     ${test}
 
     ## Questions
-    ${questionText}
+    ${name}
+    ${email}
+    ${github}(#${github})
+    Please reach out to me either by github or my email if you have any questions.
     `;
 };
