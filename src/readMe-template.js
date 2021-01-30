@@ -1,4 +1,15 @@
 //export function to generate entire page
+const generateCreditText = creditText => {
+    if (!creditText) {
+        return '';
+    }
+
+    return `
+    ## Credits
+    ${creditText}
+    `
+}
+
 module.exports = templateData => {
     const { projectTitle, descriptionText, installationText, usageText, creditText, licenseText, contributingText, test, name, github, email } = templateData;
     
@@ -23,10 +34,7 @@ module.exports = templateData => {
     ## Usage
     ${usageText}
 
-    ![alt text](assets/images/screenshot.png)
-
-    ## Credits
-    ${creditText}
+    ${generateCreditText(creditText)}
 
     ## License
     ${licenseText}
