@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateReadMe = require('./src/readMe-template.js');
+
 // TODO: Create an array of questions for user input
 const promptUser = () => {
     return inquirer.prompt([
@@ -109,11 +110,16 @@ const promptUser = () => {
             message: 'Provide information for the collaborators and their GitHub profiles:',
             when: ({ confirmCreditText }) => confirmCreditText
         }
-    ]);
+    ])
+    .then()
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {}

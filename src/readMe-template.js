@@ -5,8 +5,10 @@ const generateCreditText = creditText => {
     }
 
     return `
+
     ## Credits
     ${creditText}
+    
     `
 }
 
@@ -33,9 +35,7 @@ module.exports = templateData => {
 
     ## Usage
     ${usageText}
-
     ${generateCreditText(creditsText)}
-
     ## License
     ${licenseText}
 
