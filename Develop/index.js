@@ -111,7 +111,9 @@ const promptUser = () => {
             when: ({ confirmCreditText }) => confirmCreditText
         }
     ])
-    .then()
+    .then(readMeData) => {
+        
+    }
 };
 
 // TODO: Create a function to write README file
