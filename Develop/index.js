@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const generateReadMe = require('./src/readMe-template.js');
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+const promptUser = readMeData => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -111,9 +111,6 @@ const promptUser = () => {
             when: ({ confirmCreditText }) => confirmCreditText
         }
     ])
-    .then(readMeData) => {
-        
-    }
 };
 
 // TODO: Create a function to write README file
@@ -136,8 +133,15 @@ const writeToFile = fileContent => {
     });
 };
 
-// TODO: Create a function to initialize app
-function init() {}
-
 // Function call to initialize app
-init();
+promptUser()
+.then(readMeData => {
+        return generateReadMe(readMeData); 
+    })
+    .then(pageReadMe => {
+        return writeToFile(pageReadMe);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
