@@ -135,6 +135,18 @@ const promptUser = readMeData => {
             message: 'Please provide your tests here.',
             when: ({ confirmTestsText }) => confirmTestsText
         },
+        {
+            type: 'confirm',
+            name: 'confirmLicenseText',
+            message: 'Would you like to add a license to your application? If you need help choosing a license use, http://choosealicense.com/',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'licenseText',
+            message: 'Please add your license here:',
+            when: ({ confirmTestsText }) => confirmTestsText
+        },
     ])
 };
 

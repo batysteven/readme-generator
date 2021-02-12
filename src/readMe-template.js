@@ -55,8 +55,6 @@ module.exports = templateData => {
     ## Usage
     ${usageText}
     ${generateCreditText(creditsText)}
-    ## License
-    ${licenseText}
     ${generateContributingText(contributingText)}
     ${generateTestsText(testsText)}
     ## Questions
@@ -64,5 +62,8 @@ module.exports = templateData => {
     ${email}
     ${github}(#${github})
     Please reach out to me either by github or my email if you have any questions.
+
+    ## License
+    ${licenseText}
     `;
 };
