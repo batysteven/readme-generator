@@ -17,10 +17,10 @@
     run: npm install inquirer
 
     ## Usage
-    instructions here
+    insctructions here
     
     ## Credits
-    colab 1 colab 2
+    colab 1, colab 2
     
     ## License
     undefined
@@ -28,13 +28,12 @@
     ## Contributing
     guidelines here
     
-    
     ## Test
     test 1, test 2
     
     ## Questions
     Steven
     steve@email.com
-    steve@github.com(#steve@github.com)
+    steven@github.com(#steven@github.com)
     Please reach out to me either by github or my email if you have any questions.
     
