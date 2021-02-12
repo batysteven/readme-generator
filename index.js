@@ -88,8 +88,8 @@ const promptUser = readMeData => {
             type: 'input',
             name: 'usageText',
             message: `Please provide and instructions or examples to use your project. (Required)
-            To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it.
-            Then, using the relative filepath, add it to your README using the following syntax: ![alt text](./assets/images/screenshot.png)`,
+    To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it.
+    Then, using the relative filepath, add it to your README using the following syntax: ![alt text](./assets/images/screenshot.png)`,
             validate: usageInput => {
                 if (usageInput) {
                     return true;

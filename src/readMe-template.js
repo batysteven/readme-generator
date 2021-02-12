@@ -5,10 +5,8 @@ const generateCreditText = creditText => {
     }
 
     return `
-
     ## Credits
     ${creditText}
-    
     `
 }
 
@@ -18,11 +16,8 @@ const generateContributingText = contributingText => {
     }
 
     return `
-    
     ## Contributing
-    ${contributingText}
-
-    `
+    ${contributingText}`
 }
 
 const generateTestsText = testsText => {
@@ -31,10 +26,8 @@ const generateTestsText = testsText => {
     }
 
     return `
-    
     ## Test
     ${testsText}
-
     `
 }
 
