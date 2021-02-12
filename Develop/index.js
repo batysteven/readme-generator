@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const generateReadMe = require('./src/readMe-template.js');
 
 // TODO: Create an array of questions for user input
-const promptUser = readMeData => {
+const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -109,7 +109,31 @@ const promptUser = readMeData => {
             name: 'creditsText',
             message: 'Provide information for the collaborators and their GitHub profiles:',
             when: ({ confirmCreditText }) => confirmCreditText
-        }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmContributingText',
+            message: 'Would you like other developers to contribute to your application or package?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'contributingText',
+            message: 'Please provide guidelines for how to do so.',
+            when: ({ confirmContributingText }) => confirmContributingText
+        },
+        {
+            type: 'confirm',
+            name: 'confirmTestsText',
+            message: 'Do you have any tests for your application?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'testsText',
+            message: 'Please provide your tests here.',
+            when: ({ confirmTestsText }) => confirmTestsText
+        },
     ])
 };
 
@@ -135,9 +159,7 @@ const writeToFile = fileContent => {
 
 // Function call to initialize app
 promptUser()
-.then(readMeData => {
-        return generateReadMe(readMeData); 
-    })
+    .then(generateReadMe())
     .then(pageReadMe => {
         return writeToFile(pageReadMe);
     })

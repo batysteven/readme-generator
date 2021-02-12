@@ -12,8 +12,34 @@ const generateCreditText = creditText => {
     `
 }
 
+const generateContributingText = contributingText => {
+    if (!contributingText) {
+        return '';
+    }
+
+    return `
+    
+    ## Contributing
+    ${contributingText}
+
+    `
+}
+
+const generateTestsText = testsText => {
+    if (!testsText) {
+        return '';
+    }
+
+    return `
+    
+    ## Test
+    ${testsText}
+
+    `
+}
+
 module.exports = templateData => {
-    const { projectTitle, descriptionText, installationText, usageText, creditsText, licenseText, contributingText, test, name, github, email } = templateData;
+    const { projectTitle, descriptionText, installationText, usageText, creditsText, licenseText, contributingText, testsText, name, github, email } = templateData;
     
     return `
     # ${projectTitle}
@@ -38,13 +64,8 @@ module.exports = templateData => {
     ${generateCreditText(creditsText)}
     ## License
     ${licenseText}
-
-    ## Contributing
-    ${contributingText}
-
-    ## Test
-    ${test}
-
+    ${generateContributingText(contributingText)}
+    ${generateTestsText(testsText)}
     ## Questions
     ${name}
     ${email}
