@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const generateReadMe = require('./src/readMe-template.js');
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+const promptUser = readMeData => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -159,7 +159,9 @@ const writeToFile = fileContent => {
 
 // Function call to initialize app
 promptUser()
-    .then(generateReadMe())
+    .then(readMeData => {
+        return generateReadMe(readMeData);
+    })
     .then(pageReadMe => {
         return writeToFile(pageReadMe);
     })
