@@ -1,8 +1,8 @@
 
-    # ReadMe Generator
+    # title
 
     ## Description
-    descriptive text here
+    fkjdsljfksd
 
     ## Table of Contents
     * [Installation](#installation)
@@ -14,26 +14,30 @@
     * [Questions](#questions)
     
     ## Installation
-    run: npm install inquirer
+    kdfjkdsa
 
     ## Usage
-    insctructions here
+    kdjfdlas
     
     ## Credits
-    colab 1, colab 2
+    colab 1
     
-    ## License
-    undefined
     
     ## Contributing
-    guidelines here
+    djflkjsd
     
     ## Test
-    test 1, test 2
+    test 1
     
     ## Questions
-    Steven
-    steve@email.com
-    steven@github.com(#steven@github.com)
+    steven
+    steven
+    steven(#steven)
     Please reach out to me either by github or my email if you have any questions.
+
+    ## License
+    kdjfskla
+
+    http://github.com - automatic!
+    [GitHub](http://github.com)
     

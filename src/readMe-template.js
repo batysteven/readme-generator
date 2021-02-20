@@ -65,5 +65,8 @@ module.exports = templateData => {
 
     ## License
     ${licenseText}
+
+    http://github.com - automatic!
+    [GitHub](http://github.com)
     `;
 };
