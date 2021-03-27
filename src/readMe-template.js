@@ -4,10 +4,10 @@ const generateCreditText = creditText => {
         return '';
     }
 
-    return `
-    ## Credits
-    ${creditText}
-    `
+return `
+## Credits
+${creditText}
+`
 }
 
 const generateContributingText = contributingText => {
@@ -15,9 +15,10 @@ const generateContributingText = contributingText => {
         return '';
     }
 
-    return `
-    ## Contributing
-    ${contributingText}`
+return `
+## Contributing
+${contributingText}
+`
 }
 
 const generateTestsText = testsText => {
@@ -25,48 +26,48 @@ const generateTestsText = testsText => {
         return '';
     }
 
-    return `
-    ## Test
-    ${testsText}
-    `
+return `
+## Test
+${testsText}
+`
 }
 
 module.exports = templateData => {
     const { projectTitle, descriptionText, installationText, usageText, creditsText, licenseText, contributingText, testsText, name, github, email } = templateData;
     
-    return `
-    # ${projectTitle}
+return `
+# ${projectTitle}
 
-    ## Description
-    ${descriptionText}
+## Description
+${descriptionText}
 
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Test](#test)
-    * [Questions](#questions)
-    
-    ## Installation
-    ${installationText}
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Contributing](#contributing)
+* [Test](#test)
+* [Questions](#questions)
 
-    ## Usage
-    ${usageText}
-    ${generateCreditText(creditsText)}
-    ${generateContributingText(contributingText)}
-    ${generateTestsText(testsText)}
-    ## Questions
-    ${name}
-    ${email}
-    ${github}(#${github})
-    Please reach out to me either by github or my email if you have any questions.
+## Installation
+${installationText}
 
-    ## License
-    ${licenseText}
+## Usage
+${usageText}
+${generateCreditText(creditsText)}
+${generateContributingText(contributingText)}
+${generateTestsText(testsText)}
+## Questions
+${name}
+${email}
+${github}(#${github})
+Please reach out to me either by github or my email if you have any questions.
 
-    http://github.com - automatic!
-    [GitHub](http://github.com)
-    `;
+## License
+${licenseText}
+
+http://github.com - automatic!
+[GitHub](http://github.com)
+`;
 };
