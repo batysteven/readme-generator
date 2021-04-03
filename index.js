@@ -145,6 +145,7 @@ const promptUser = readMeData => {
             type: 'list',
             name: 'licenseText',
             message: 'Please select a license from these choices:',
+            when: ({ confirmLicenseText }) => confirmLicenseText,
             choices: [{name: "GNU LGPLv3", value: `                    GNU LESSER GENERAL PUBLIC LICENSE
             Version 3, 2021
 
@@ -228,7 +229,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>`,
-        when: ({ confirmLicenseText }) => confirmLicenseText}]
+        }]
         }
     ])
 };
