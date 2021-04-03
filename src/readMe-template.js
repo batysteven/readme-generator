@@ -61,13 +61,13 @@ ${generateTestsText(testsText)}
 ## Questions
 ${name}
 ${email}
-${github}(#${github})
+http://github.com/${github}
 Please reach out to me either by github or my email if you have any questions.
 
 ## License
 ${licenseText}
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+http://github.com/${github}
+[GitHub](http://github.com/${github})
 `;
 };
