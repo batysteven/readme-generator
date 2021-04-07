@@ -17,7 +17,7 @@ With the team-profile-generator program the user is able to generate a team cons
 Start with "node index.js" in terminal.
 
 ## Usage
-add later
+![screenshot for readme-generator finished](../img/readme-generator-screenshot.png)
 
 ## Questions
 Steven Baty
